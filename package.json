@@ -1,0 +1,31 @@
+{
+  "name": "luanvan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangnhutthai/LuanVan.git"
+  },
+  "keywords": [
+    "blog",
+    "dangnhutthai",
+    "b2014698"
+  ],
+  "author": "dangnhutthai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dangnhutthai/LuanVan/issues"
+  },
+  "homepage": "https://github.com/dangnhutthai/LuanVan#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
