@@ -2,10 +2,20 @@
   "name": "luanvan",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "beautiful": "lint-staged",
+    "watch": "node-sass --watch src/resources/scss/ -o src/public/formatcss/",
+    "start": "nodemon --inspect src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "link-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -23,9 +33,15 @@
   },
   "homepage": "https://github.com/dangnhutthai/LuanVan#readme",
   "dependencies": {
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "express-handlebars": "^8.0.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3"
   }
 }
